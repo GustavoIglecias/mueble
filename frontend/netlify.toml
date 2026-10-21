@@ -5,7 +5,7 @@
 
 [[redirects]]
   source = "/api/*"
-  dest = "https://TU-BACKEND.onrender.com/api/:splat"
+  dest = "https://muebleria-backend-acii.onrender.com/api/:splat"
   status = 200
 
 [[headers]]
