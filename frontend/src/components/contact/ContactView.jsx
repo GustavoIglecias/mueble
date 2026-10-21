@@ -3,7 +3,7 @@ import {
   MessageCircle, MapPin, Clock, ArrowRight, ShieldCheck,
   ChevronDown, ChevronUp, Home, Truck, CreditCard, Code2, Mail
 } from 'lucide-react';
-import { buildSecureWhatsAppUrl, openSecureWhatsApp } from '../utils/whatsappSecurity';
+import { buildSecureWhatsAppUrl, openSecureWhatsApp } from '../../utils/whatsappSecurity';
 
 const FAQ = [
   {

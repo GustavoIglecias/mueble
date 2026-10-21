@@ -1,3 +1,7 @@
+// ─── API Layer ───────────────────────────────────────────────────────────────
+// Todas las llamadas HTTP al backend en un solo lugar.
+// Importar funciones individuales con: import { fetchFurniture } from '../api'
+
 const API_URL = '/api';
 
 export async function fetchFurniture(filters = {}) {
@@ -22,7 +26,7 @@ export async function loginUser(username, password) {
   const res = await fetch(`${API_URL}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, password })
+    body: JSON.stringify({ username, password }),
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Credenciales incorrectas');
@@ -34,9 +38,9 @@ export async function createFurniture(furnitureData, token) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
+      'Authorization': `Bearer ${token}`,
     },
-    body: JSON.stringify(furnitureData)
+    body: JSON.stringify(furnitureData),
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Error al guardar mueble');
@@ -48,9 +52,9 @@ export async function updateFurniture(id, furnitureData, token) {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
+      'Authorization': `Bearer ${token}`,
     },
-    body: JSON.stringify(furnitureData)
+    body: JSON.stringify(furnitureData),
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Error al actualizar');
@@ -60,9 +64,7 @@ export async function updateFurniture(id, furnitureData, token) {
 export async function deleteFurniture(id, token) {
   const res = await fetch(`${API_URL}/furniture/${id}`, {
     method: 'DELETE',
-    headers: {
-      'Authorization': `Bearer ${token}`
-    }
+    headers: { 'Authorization': `Bearer ${token}` },
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Error al eliminar');
@@ -81,10 +83,8 @@ export async function uploadImages(files, token) {
 
   const res = await fetch(`${API_URL}/upload`, {
     method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${token}`
-    },
-    body: formData
+    headers: { 'Authorization': `Bearer ${token}` },
+    body: formData,
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Error al subir fotos');
@@ -96,15 +96,16 @@ export async function setFeaturedFurniture(id, token) {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
+      'Authorization': `Bearer ${token}`,
     },
-    body: JSON.stringify({ featured_id: id })
+    body: JSON.stringify({ featured_id: id }),
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Error al actualizar destacado');
   return data;
 }
 
+// Alias de conveniencia para subir un solo archivo
 export async function uploadImage(file, token) {
   return uploadImages([file], token);
 }

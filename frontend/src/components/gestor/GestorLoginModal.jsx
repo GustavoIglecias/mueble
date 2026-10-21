@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Lock, User, AlertCircle, ShieldCheck } from 'lucide-react';
-import { loginUser } from '../api';
+import { loginUser } from '../../api';
 
 export default function GestorLoginModal({ isOpen, onClose, onLoginSuccess }) {
   const [username, setUsername] = useState('admin');

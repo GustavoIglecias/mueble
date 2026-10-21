@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Trees, Hammer, ShieldCheck, Quote, MessageCircle, MapPin, Clock } from 'lucide-react';
-import { buildSecureWhatsAppUrl, openSecureWhatsApp } from '../utils/whatsappSecurity';
+import { buildSecureWhatsAppUrl, openSecureWhatsApp } from '../../utils/whatsappSecurity';
 
 export default function AtelierView() {
   const [notice, setNotice] = useState('');
