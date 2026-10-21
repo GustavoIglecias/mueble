@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { RefreshCw } from 'lucide-react';
 
 // ── Hooks ──────────────────────────────────────────────────────────────────
@@ -27,7 +27,15 @@ import GestorFurnitureModal from './components/gestor/GestorFurnitureModal';
 import DeleteConfirmModal   from './components/gestor/DeleteConfirmModal';
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
+  // Detectar si venimos de un enlace directo (WhatsApp o QR: ?mueble=ID)
+  const initialMuebleId = useRef(
+    typeof window !== 'undefined'
+      ? (new URLSearchParams(window.location.search).get('mueble') || new URLSearchParams(window.location.search).get('pieza'))
+      : null
+  );
+
+  // Si el usuario entra directamente a ver un mueble específico, omitir splash screen
+  const [showSplash, setShowSplash] = useState(() => !initialMuebleId.current);
   const [activeTab, setActiveTab]   = useState('catalogo');
 
   // ── Estado del catálogo (fetching, filtros, eliminación) ────────────────
@@ -42,29 +50,41 @@ export default function App() {
   const [isFurnitureModalOpen, setIsFurnitureModalOpen] = useState(false);
   const [editingItem, setEditingItem]             = useState(null);
 
-  // ── Navegación por URL: ?mueble=ID ─────────────────────────────────────
+  const isInitialized = useRef(false);
+
+  // ── 1. Cargar pieza directa si venía en la URL al completar fetch ──────
   useEffect(() => {
-    if (catalog.allFurniture.length > 0) {
-      const params = new URLSearchParams(window.location.search);
-      const mId = params.get('mueble') || params.get('pieza');
-      if (mId) {
-        const found = catalog.allFurniture.find(x => String(x.id) === String(mId));
-        if (found) { setSelectedItem(found); setActiveTab('catalogo'); }
+    if (catalog.allFurniture.length > 0 && !isInitialized.current) {
+      isInitialized.current = true;
+      const targetId = initialMuebleId.current;
+      if (targetId) {
+        const found = catalog.allFurniture.find(x => String(x.id) === String(targetId));
+        if (found) {
+          setSelectedItem(found);
+          setActiveTab('catalogo');
+        }
       }
     }
   }, [catalog.allFurniture]);
 
+  // ── 2. Sincronizar URL únicamente en interacciones del usuario ─────────
+  const isFirstRender = useRef(true);
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     if (selectedItem) {
       window.history.replaceState({ muebleId: selectedItem.id }, '', `${window.location.pathname}?mueble=${selectedItem.id}`);
     } else {
-      const params = new URLSearchParams(window.location.search);
-      if (params.has('mueble') || params.has('pieza')) {
+      // Solo limpiar la URL si ya se inicializó el catálogo
+      if (isInitialized.current) {
         window.history.replaceState({}, '', window.location.pathname);
       }
     }
   }, [selectedItem]);
 
+  // ── 3. Navegación Atrás/Adelante del navegador (popstate) ───────────────
   useEffect(() => {
     const handle = () => {
       const params = new URLSearchParams(window.location.search);
