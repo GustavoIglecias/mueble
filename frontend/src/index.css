@@ -87,3 +87,28 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Ocultar badge publicitario y widgets inyectados por Netlify (Netlify HUD / Drawer) */
+#nl-badge-frame,
+#nl-hud-frame,
+iframe#nl-badge-frame,
+iframe#nl-hud-frame,
+iframe[title*="Netlify"],
+iframe[title*="Powered by Netlify"],
+iframe[id^="nl-"],
+div[data-netlify-hud],
+div[class*="netlify-hud"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  clip-path: inset(100%) !important;
+  width: 0 !important;
+  height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  z-index: -9999 !important;
+}
