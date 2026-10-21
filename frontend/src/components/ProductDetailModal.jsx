@@ -3,6 +3,9 @@ import { ArrowLeft, MessageCircle, Ruler, Sparkles, QrCode, Check, ChevronLeft, 
 import { buildSecureWhatsAppUrl, openSecureWhatsApp } from '../utils/whatsappSecurity';
 
 export default function ProductDetailModal({ item, onClose, onShowQR }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [notice, setNotice] = useState('');
+
   if (!item) return null;
 
   // Extract gallery images safely
@@ -17,9 +20,6 @@ export default function ProductDetailModal({ item, onClose, onShowQR }) {
   if (!Array.isArray(images) || images.length === 0) {
     images = [item.image_url];
   }
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [notice, setNotice] = useState('');
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));

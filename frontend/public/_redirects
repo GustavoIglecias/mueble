@@ -1,0 +1,2 @@
+/api/*  https://muebleria-backend-acii.onrender.com/api/:splat  200!
+/*  /index.html  200
