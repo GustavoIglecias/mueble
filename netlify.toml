@@ -1,0 +1,14 @@
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm ci && npm run build"
+
+[[redirects]]
+  source = "/api/*"
+  dest = "https://muebleria-backend-acii.onrender.com/api/:splat"
+  status = 200
+
+[[headers]]
+  source = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
