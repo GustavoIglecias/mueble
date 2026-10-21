@@ -19,10 +19,17 @@ const PORT = process.env.PORT || 3001;
 
 // Supabase Client
 const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY || process.env.SUPABASE_ANON_KEY;
 
-console.log(' Conectado exitosamente a Supabase:', supabaseUrl);
+if (!supabaseUrl || !supabaseKey) {
+  console.error('❌ ERROR: SUPABASE_URL o SUPABASE_SERVICE_ROLE_KEY no están configuradas en las variables de entorno!');
+}
+
+const isServiceRole = Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY);
+console.log('✅ Supabase configurado:', supabaseUrl);
+console.log('🔑 Tipo de llave activa:', isServiceRole ? 'SERVICE_ROLE (Acceso total)' : 'ANON/KEY (Sujeto a políticas RLS)');
+
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 const app = express();
 
