@@ -1,0 +1,311 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#eae1d7", "surface-dim": "#dfd9d5", "surface": "#fff8f4", "tertiary-container": "#c1532b", "on-error": "#ffffff", "on-background": "#1d1b19", "tertiary-fixed": "#ffdbd0", "on-surface": "#1d1b19", "secondary": "#635e56", "primary-fixed": "#ffdbcf", "surface-container-high": "#ede7e3", "on-tertiary-fixed": "#390c00", "on-surface-variant": "#57423b", "on-tertiary": "#ffffff", "surface-container-low": "#f9f2ef", "on-tertiary-container": "#fffbff", "on-tertiary-fixed-variant": "#832600", "on-primary-fixed": "#390c00", "surface-container": "#f3ede9", "inverse-primary": "#ffb59c", "background": "#fff8f4", "surface-tint": "#a23e18", "surface-bright": "#fff8f4", "secondary-fixed-dim": "#cdc5bc", "inverse-surface": "#32302e", "error": "#ba1a1a", "outline": "#8a726a", "on-primary-container": "#fffbff", "tertiary": "#a03b15", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "surface-variant": "#e7e1de", "surface-container-highest": "#e7e1de", "primary": "#9f3c16", "on-primary-fixed-variant": "#822801", "primary-fixed-dim": "#ffb59c", "inverse-on-surface": "#f6efec", "on-error-container": "#93000a", "on-secondary-fixed": "#1f1b15", "tertiary-fixed-dim": "#ffb59d", "secondary-container": "#eae1d7", "on-secondary": "#ffffff", "outline-variant": "#dec0b7", "on-secondary-container": "#69635c", "error-container": "#ffdad6", "primary-container": "#bf542c", "on-secondary-fixed-variant": "#4b463f" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "2rem", "margin": "1.25rem", "gutter-desktop": "2.5rem", "margin-desktop": "4rem", "space-xl": "3.5rem", "space-md": "1.25rem", "space-xs": "0.375rem", "gutter": "1.5rem", "space-sm": "0.75rem" }, fontFamily: { "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "display-lg": ["Playfair Display"], "headline-lg": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "headline-sm": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "0em", fontWeight: "400" }], "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "400" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "400" }], "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", fontWeight: "500" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }], "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }] } } } };</script><style>@layer base { html, body { margin: 0; padding: 0; min-height: 100%; background-color: #fff8f4; color: #1d1b19; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(29,27,25,0.03)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Casa Lento Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALCgzwyB7rNDXHtToaWZ2kAf2xbNB87nhFwznH5xMojGj83KxETHMrk0OAZxiJ7UC9HL_PThQWwLVLgz1vxclBZ0NQ023Fd_GDOqTtYgiTPUSOszbYh5fhxclAnQ3c4zxk6SGTbJfLKPFMXCERgK1tirR86uGJ2a0B3ML9d6Hx70zhFGlnLahqR86NJJHUkvy6VTsEmomcrIGBnPfIheoIMdRRkhdBYXkHBMuuPd4_21q1Djn_qyI"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight ml-1">Casa Lento</span></div><div class="flex items-center gap-space-xs"><button aria-label="Search Catalogue" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 flex flex-col"><div class="flex flex-col w-full">
+<!-- Status & Master Artisan Badge -->
+<section class="px-margin pt-4 pb-2">
+<div class="flex items-center justify-between gap-space-xs mb-3">
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Taller Artesanal • Valencia</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Mateo R. — Ebanista</span>
+</div>
+</div>
+<!-- Editorial Subtitle & Context -->
+<div class="space-y-1">
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Atelier • Registro de Producción</p>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Inventario &amp; Fichas</h1>
+</div>
+<!-- Mode Toggle Segment -->
+<div class="mt-4 bg-surface-container-high p-1 rounded-xl flex items-center justify-between gap-1 shadow-sm">
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant flex items-center justify-center gap-1.5 transition-all" id="tab-taller" onclick="switchView('taller')" type="button">
+<span class="material-symbols-outlined text-[18px]">handyman</span>
+<span>Acceso Taller</span>
+</button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-on-surface font-semibold shadow-sm flex items-center justify-center gap-1.5 transition-all" id="tab-nuevo" onclick="switchView('nuevo')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">add_circle</span>
+<span>Nuevo Mueble</span>
+</button>
+</div>
+</section>
+<!-- FORM VIEW CONTAINER -->
+<div class="flex flex-col gap-5 px-margin pb-6" id="view-nuevo">
+<!-- 1. Carga de Fotografías y Carrito Visual -->
+<section class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface text-[18px]">Fotografías de Taller</h2>
+<span class="font-label-sm text-label-sm text-secondary">2 de 6 fijadas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Sube hasta 6 tomas con luz natural neutra para destacar vetas, ensambles de cola de milano y porosidad.
+      </p>
+<!-- Thumbnails + Dropzone Horizontal Scroll -->
+<div class="flex items-center gap-3 overflow-x-auto pb-1 pt-1 -mx-1 px-1">
+<!-- Photo 1: Principal -->
+<div class="relative shrink-0 w-28 h-36 rounded-lg overflow-hidden bg-surface-container shadow-sm group">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of hand carved solid oak coffee table with soft sunlit grain in warm terracotta studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1fHWcozJM9psw1_jokEbB2Tz05YA79UBIUmIe2kqF939Plkskk8g4sBhnkV8FScoLdQvrfoeCDE46IhHMdRw-f1NsyvRb5DaPiKLlIFlffOYhJ-NRnzsyW9cPKnXZ15H96XjeNOWRhixuoGgs8cbTzOciIxuGFWC4ppi3xXHPTowKl8b7pJOJJ887DfG6rUSUzKn6O4HXGXJvFa_CNp6FsPYwLfc2xRXLexZqZ0OEyS6AYWvILuA">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded uppercase">Principal</span>
+<button aria-label="Eliminar foto 1" class="absolute top-2 right-2 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-on-surface flex items-center justify-center shadow" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between text-on-tertiary font-label-sm text-label-sm">
+<span>#1 Frontal</span>
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+</div>
+</div>
+<!-- Photo 2 -->
+<div class="relative shrink-0 w-28 h-36 rounded-lg overflow-hidden bg-surface-container shadow-sm group">
+<img class="w-full h-full object-cover" data-alt="Macro detail of artisan mortise and tenon joinery on natural walnut timber under gentle morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5XhYosCq_xJCb1DaEEr9zIMO_-1OaLcFXRWkqReVh8N5TAUtCuUQQ-nF6sJCqsto6sGOk7xT7aWRRzoa5Fy1_wdveRGuEXb_BhjpCkkDjWHrTYF3hN5jGPZ_bm14kixIB6jHDDX5yvIuXJuhHjEJZjI9Fl3bIX4sRmsU4WTbPOuZZTy6mninlYb3Q0KhVBxKIxmdY9uv_XksyrQtdBEE_YQGiB5-sAtQrdaZVGL0Gtxi8XdpEvj0">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<button aria-label="Eliminar foto 2" class="absolute top-2 right-2 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-on-surface flex items-center justify-center shadow" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between text-on-tertiary font-label-sm text-label-sm">
+<span>#2 Detalle</span>
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+</div>
+</div>
+<!-- Dropzone interactive card -->
+<div class="shrink-0 w-28 h-36 rounded-lg bg-surface-container-low flex flex-col items-center justify-center text-center p-2.5 transition-colors active:scale-95 cursor-pointer shadow-inner">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md mb-2">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Añadir Toma</span>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">JPG / RAW</span>
+</div>
+</div>
+</section>
+<!-- 2. Formulario Estructurado -->
+<section class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface text-[18px]">Ficha Descriptiva</h2>
+</div>
+<!-- Nombre de la Pieza -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" for="piece-name">Nombre de la pieza</label>
+<div class="bg-surface-container-low px-3.5 py-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">draw</span>
+<input class="bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary-fixed-dim outline-none w-full" id="piece-name" placeholder="ej. Mesa de Centro Ágata" type="text" value="Mesa de Centro Ágata">
+</div>
+</div>
+<!-- Categoría Pills -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Categoría de Atelier</label>
+<div class="flex flex-wrap gap-2" id="category-chips">
+<button class="px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant transition-colors" onclick="selectCategory(this)" type="button">Asientos</button>
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-inverse-surface text-inverse-on-surface font-medium transition-colors" onclick="selectCategory(this)" type="button">Mesas</button>
+<button class="px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant transition-colors" onclick="selectCategory(this)" type="button">Almacenaje</button>
+<button class="px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant transition-colors" onclick="selectCategory(this)" type="button">Iluminación</button>
+</div>
+</div>
+<!-- Precio & Moneda -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" for="piece-price">Precio Estimado de Salida</label>
+<div class="bg-surface-container-low px-3.5 py-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2 flex-1">
+<span class="font-headline-sm text-headline-sm text-primary text-[20px]">€</span>
+<input class="bg-transparent font-headline-sm text-headline-sm text-on-surface outline-none w-full" id="piece-price" step="10" type="number" value="1240">
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-1 rounded">EUR (IVA inc.)</span>
+</div>
+</div>
+<!-- Medidas Técnicas (Grid de 3 Columnas) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Dimensiones Exactas</label>
+<span class="font-label-sm text-label-sm text-secondary-container-variant text-secondary">Calibrado en taller</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<!-- Alto -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Alto</span>
+<div class="flex items-baseline gap-1">
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface text-[18px] outline-none" type="number" value="42">
+<span class="font-label-sm text-label-sm text-secondary">cm</span>
+</div>
+</div>
+<!-- Ancho -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Ancho</span>
+<div class="flex items-baseline gap-1">
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface text-[18px] outline-none" type="number" value="110">
+<span class="font-label-sm text-label-sm text-secondary">cm</span>
+</div>
+</div>
+<!-- Fondo -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Fondo</span>
+<div class="flex items-baseline gap-1">
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface text-[18px] outline-none" type="number" value="65">
+<span class="font-label-sm text-label-sm text-secondary">cm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Materiales -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Composición Noble</label>
+<span class="font-label-sm text-label-sm text-primary font-medium">+ Sugerir acabado</span>
+</div>
+<div class="flex flex-wrap gap-1.5" id="material-tags">
+<button class="px-3 py-1 rounded-lg font-label-md text-label-md bg-inverse-surface text-inverse-on-surface flex items-center gap-1.5" onclick="toggleMaterial(this)" type="button">
+<span>Roble macizo</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="px-3 py-1 rounded-lg font-label-md text-label-md bg-inverse-surface text-inverse-on-surface flex items-center gap-1.5" onclick="toggleMaterial(this)" type="button">
+<span>Travertino</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="px-3 py-1 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface-variant flex items-center gap-1.5" onclick="toggleMaterial(this)" type="button">
+<span>Nogal</span>
+<span class="material-symbols-outlined text-[14px] opacity-0">check</span>
+</button>
+<button class="px-3 py-1 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface-variant flex items-center gap-1.5" onclick="toggleMaterial(this)" type="button">
+<span>Bouclé</span>
+<span class="material-symbols-outlined text-[14px] opacity-0">check</span>
+</button>
+<button class="px-3 py-1 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface-variant flex items-center gap-1.5" onclick="toggleMaterial(this)" type="button">
+<span>Lino lavado</span>
+<span class="material-symbols-outlined text-[14px] opacity-0">check</span>
+</button>
+</div>
+</div>
+<!-- Checkbox Estilizado -->
+<label class="flex items-start gap-3 bg-surface-container-low p-3 rounded-lg cursor-pointer select-none">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Destacar: "Ideal para espacios compactos"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aparecerá en el lookbook de lofts mediterráneos y colecciones de paso.</span>
+</div>
+</label>
+</section>
+<!-- 3. Pasaporte Digital y Generación QR -->
+<section class="bg-surface-container-high p-4 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">qr_code_2</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface text-[18px]">Pasaporte de Atelier</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-on-surface font-mono px-2 py-0.5 rounded">REF: CL-2024-089</span>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-lg flex items-center gap-4">
+<!-- SVG QR Mockup with organic artisanal touch -->
+<div class="p-2 bg-surface rounded-lg shadow-sm shrink-0 flex items-center justify-center">
+<svg class="w-16 h-16 text-on-surface" fill="currentColor" viewBox="0 0 100 100">
+<!-- QR Pattern Blocks -->
+<rect fill="currentColor" height="28" rx="2" width="28" x="5" y="5"></rect>
+<rect fill="#fff8f4" height="20" rx="1" width="20" x="9" y="9"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="13" y="13"></rect>
+<rect fill="currentColor" height="28" rx="2" width="28" x="67" y="5"></rect>
+<rect fill="#fff8f4" height="20" rx="1" width="20" x="71" y="9"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="75" y="13"></rect>
+<rect fill="currentColor" height="28" rx="2" width="28" x="5" y="67"></rect>
+<rect fill="#fff8f4" height="20" rx="1" width="20" x="9" y="71"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="13" y="75"></rect>
+<!-- Internal modules -->
+<rect fill="currentColor" height="7" width="7" x="42" y="10"></rect>
+<rect fill="#9f3c16" height="6" width="6" x="52" y="10"></rect>
+<rect fill="currentColor" height="8" rx="1" width="16" x="42" y="24"></rect>
+<rect fill="currentColor" height="12" width="8" x="10" y="44"></rect>
+<rect fill="currentColor" height="6" width="14" x="25" y="44"></rect>
+<rect fill="#9f3c16" height="10" width="10" x="45" y="45"></rect>
+<rect fill="currentColor" height="6" width="28" x="65" y="42"></rect>
+<rect fill="currentColor" height="14" width="8" x="70" y="54"></rect>
+<rect fill="currentColor" height="22" width="8" x="85" y="54"></rect>
+<rect fill="currentColor" height="8" width="14" x="42" y="65"></rect>
+<rect fill="currentColor" height="12" rx="1" width="16" x="50" y="80"></rect>
+</svg>
+</div>
+<div class="flex flex-col justify-center gap-1.5 flex-1 min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">Etiqueta de Banco • CL-089</p>
+<p class="font-body-sm text-body-sm text-secondary leading-snug">Vincula el historial de secado de madera y artesano asignado.</p>
+<button class="self-start mt-0.5 inline-flex items-center gap-1.5 text-primary hover:text-primary-container font-label-md text-label-md font-semibold transition-colors" onclick="triggerToast('Etiqueta enviada a impresora térmica de taller')" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Imprimir Etiqueta Térmica</span>
+</button>
+</div>
+</div>
+<button class="w-full py-2.5 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-surface-variant transition-colors" onclick="triggerToast('Código QR regenerado con metadatos actualizados')" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Regenerar Parámetros QR</span>
+</button>
+</section>
+<!-- 4. Acciones Finales -->
+<section class="flex flex-col gap-2 pt-1 pb-4">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg py-3.5 px-6 rounded-lg flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99]" onclick="triggerToast('Ficha de Ágata publicada en el catálogo oficial')" type="button">
+<span class="material-symbols-outlined text-[20px]">public</span>
+<span>Publicar en Catálogo</span>
+</button>
+<div class="flex items-center justify-between px-2 pt-1">
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors" onclick="triggerToast('Borrador guardado localmente')" type="button">
+          Guardar como borrador
+        </button>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Auto-guardado 12:44
+        </span>
+</div>
+</section>
+</div>
+<!-- Toast Notification Feedback -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-xl font-label-md text-label-md flex items-center gap-2 pointer-events-none opacity-0 transition-opacity duration-300 z-50 whitespace-nowrap" id="atelier-toast">
+<span class="material-symbols-outlined text-inverse-primary text-[18px]">info</span>
+<span id="toast-text">Actualizado</span>
+</div>
+<!-- Inline Micro-interactions -->
+<script>
+    function selectCategory(el) {
+      const container = document.getElementById('category-chips');
+      const buttons = container.querySelectorAll('button');
+      buttons.forEach(btn => {
+        btn.className = 'px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant transition-colors';
+      });
+      el.className = 'px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-inverse-surface text-inverse-on-surface font-medium transition-colors';
+    }
+
+    function toggleMaterial(el) {
+      const isSelected = el.classList.contains('bg-inverse-surface');
+      const icon = el.querySelector('.material-symbols-outlined');
+      if (isSelected) {
+        el.className = 'px-3 py-1 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface-variant flex items-center gap-1.5 transition-colors';
+        icon.classList.add('opacity-0');
+      } else {
+        el.className = 'px-3 py-1 rounded-lg font-label-md text-label-md bg-inverse-surface text-inverse-on-surface flex items-center gap-1.5 transition-colors';
+        icon.classList.remove('opacity-0');
+      }
+    }
+
+    function switchView(tab) {
+      const tabTaller = document.getElementById('tab-taller');
+      const tabNuevo = document.getElementById('tab-nuevo');
+      if (tab === 'taller') {
+        tabTaller.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-on-surface font-semibold shadow-sm flex items-center justify-center gap-1.5 transition-all';
+        tabNuevo.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant flex items-center justify-center gap-1.5 transition-all';
+        triggerToast('Vista de Taller: 8 proyectos en banco actualmente');
+      } else {
+        tabNuevo.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-on-surface font-semibold shadow-sm flex items-center justify-center gap-1.5 transition-all';
+        tabTaller.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant flex items-center justify-center gap-1.5 transition-all';
+      }
+    }
+
+    function triggerToast(message) {
+      const toast = document.getElementById('atelier-toast');
+      const text = document.getElementById('toast-text');
+      text.textContent = message;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2500);
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(29,27,25,0.04)]" data-active-classes="text-primary"><div class="h-16 px-margin flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">chair</span><span class="font-label-sm text-label-sm mt-0.5 tracking-wider uppercase">Catálogo</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="coleccion" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm mt-0.5 tracking-wider uppercase">Colección</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary" data-path="gestor-atelier" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm mt-0.5 tracking-wider uppercase">Gestor</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="contacto" href="#"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="font-label-sm text-label-sm mt-0.5 tracking-wider uppercase">Contacto</span></a></div></nav></body></html>

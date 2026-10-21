@@ -1,0 +1,14 @@
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm ci && npm run build"
+
+[[redirects]]
+  source = "/api/*"
+  dest = "https://TU-BACKEND.onrender.com/api/:splat"
+  status = 200
+
+[[headers]]
+  source = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
