@@ -27,5 +27,10 @@ Thumbs.db
 *.swp
 *.swo
 
-# Backend - uploads locales (si los usas; las fotos van a Supabase)
+# Backend - uploads locales (las fotos van a Supabase, no al servidor)
 backend/uploads/
+
+# Archivos de prueba / temporales
+*.test.js
+*.spec.js
+coverage/
