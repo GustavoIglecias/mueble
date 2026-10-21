@@ -1,14 +1,27 @@
+# Configuración de Netlify para Mueblería Iglesias
 [build]
   base = "frontend"
   publish = "dist"
-  command = "npm ci && npm run build"
+  command = "npm run build"
 
+# Redirigir llamadas de API hacia el backend en Render
 [[redirects]]
-  source = "/api/*"
-  dest = "https://muebleria-backend-acii.onrender.com/api/:splat"
+  from = "/api/*"
+  to = "https://muebleria-backend-acii.onrender.com/api/:splat"
+  status = 200
+  force = true
+
+# Redirigir cualquier ruta interna de la SPA a index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
 
+# Headers de seguridad y CORS
 [[headers]]
-  source = "/api/*"
+  for = "/*"
   [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
     Access-Control-Allow-Origin = "*"
